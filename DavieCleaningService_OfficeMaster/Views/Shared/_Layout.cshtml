@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- meta data & title -->
+    <meta charset="utf-8" />
+    <title>Davie Cleaning Service - @ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="~/assets/css/style-projects.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="~/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/apple-touch-icon-57-precomposed.png">
+
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+</head>
+<body>
+    <!-- Header -->
+
+    <nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand wow fadeInDownBig" href="@Url.Action("Index", "Home")"><img src="~/assets/img/slider/DavieCleaningService.png" width="100" alt="Davie Cleaning Service"></a>
+            </div>
+
+            <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right" id="navitems">
+                    @*<li class="active" id="navHome">
+        <a href="@Url.Action("Index", "Home")">Home</a>
+    </li>
+    <li id="navAbout">
+        <a href="@Url.Action("About","Home")">About Us</a>
+    </li>
+    <li id="navTeam">
+        <a href="@Url.Action("Team","Home")">Our Team</a>
+    </li>
+    <li id="navServices">
+        <a href="@Url.Action("Services","Home")">Our Services</a>
+    </li>
+    <li id="navBlog">
+        <a href="@Url.Action("Index","Blog")">Blog</a>
+    </li>
+    <li id="navContact">
+        <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
+    </li>*@
+                    @{if (ViewBag.CurrentMenuItem == "Home"){
+                          <li class="active">
+                    <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("About","Home")">About Us</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Team","Home")">Our Team</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Services","Home")">Our Services</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Index","Blog")">Blog</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
+                    </li>
+                    }
+                    else if (ViewBag.CurrentMenuItem == "About"){
+                        <li>
+                    <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li class="active">
+                    <a href="@Url.Action("About","Home")">About Us</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Team","Home")">Our Team</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Services","Home")">Our Services</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Index","Blog")">Blog</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
+                    </li>
+                    }
+                    else if (ViewBag.CurrentMenuItem == "Our Team"){
+                        <li>
+                    <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("About","Home")">About Us</a>
+                    </li>
+                    <li class="active">
+                    <a href="@Url.Action("Team","Home")">Our Team</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Services","Home")">Our Services</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Index","Blog")">Blog</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
+                    </li>
+                    }
+                    else if(ViewBag.CurrentMenuItem == "Our Services"){
+                        <li>
+                    <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("About","Home")">About Us</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Team","Home")">Our Team</a>
+                    </li>
+                    <li class="active">
+                    <a href="@Url.Action("Services","Home")">Our Services</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Index","Blog")">Blog</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
+                    </li>
+                    }
+                    else if (ViewBag.CurrentMenuItem == "Blog"){
+                        <li>
+                    <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("About","Home")">About Us</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Team","Home")">Our Team</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Services","Home")">Our Services</a>
+                    </li>
+                    <li class="active">
+                    <a href="@Url.Action("Index","Blog")">Blog</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
+                    </li>
+                    }
+                    else if (ViewBag.CurrentMenuItem == "Contact Us"){
+                        <li>
+                    <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("About","Home")">About Us</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Team","Home")">Our Team</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Services","Home")">Our Services</a>
+                    </li>
+                    <li>
+                    <a href="@Url.Action("Index","Blog")">Blog</a>
+                    </li>
+                    <li class="active">
+                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
+                    </li>
+                    }
+                    }
+    @*
+    <li>
+        <a href="@Url.Action("Index", "Home")">Home</a>
+    </li>
+    <li>
+        <a href="@Url.Action("About","Home")">About Us</a>
+    </li>
+    <li>
+        <a href="team.html">Our Team</a>
+    </li>
+    <li>
+        <a href="services.html">Our Services</a>
+    </li>
+    <li>
+        <a href="blog.html">Blog</a>
+    </li>
+    <li>
+        <a href="contact.html"><span>Contact Us</span></a>
+    </li>*@
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- End Header -->
+    <!--<div class="container body-content">-->
+        @RenderBody()
+        <!--<hr />-->
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3><i class="fa fa-map-marker"></i> Contact Information:</h3>
+                        <p class="footer-contact">
+                            126 Ashley Brook Lane, Mocksville, NC 27028<br><br>
+                            Tonya Crouse - Founder & CEO<br> Phone: 1.336.407.7056 Fax: 1.336.751.3700<br>
+                            Email: dcstonyacrouse@gmail.com<br><br>
+                            Brittney Overby - Co-Manager<br> Phone: 1.336.407.7054<br>
+                            Email: bmOverby1988@gmail.com
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3><i class="fa fa-external-link"></i> Links</h3>
+                        <p><a href="#"><i class="fa fa-info-circle fa-lg"></i> About Us...</a></p>
+                        <p><a href="#"><i class="fa fa-users fa-lg"></i> Our Team...</a></p>
+                        <p><a href="#"><i class="fa fa-wrench fa-lg"></i> Our Services...</a></p>
+                        <p><a href="#"><i class="fa fa-rss fa-lg"></i> Our Blog...</a></p>
+                        <p> <a href="#"><i class="fa fa-phone fa-lg"></i> Contact Us...</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3><i class="fa fa-heart"></i> Socialize</h3>
+                        <div id="social-icons">
+                            <a href="#" class="btn-group google-plus">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="#" class="btn-group linkedin">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                            <a href="#" class="btn-group twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="btn-group facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="copyright text center">
+            <p>&copy; Copyright 2015, <a href="#">DAVIE CLEANING SERVICE</a>. Theme by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a></p>
+        </div>
+
+    <!--</div>-->
+    @*
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    *@
+    <script type="text/javascript" src="~/js/jquery-1.10.2.min.js"></script>
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/js/wow.min.js"></script>@*
+    <script>
+        @{
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            SetCurrentPage();
+        }
+
+        private void SetCurrentPage()
+        {
+            var pageName = GetPageName();
+
+            switch (pageName)
+            {
+                case "home.aspx":
+                    home.Attributes["class"] = "active";
+                    break;
+                case "about.aspx":
+                    about.Attributes["class"] = "active";
+                    break;
+                case "contact.aspx":
+                    contact.Attributes["class"] = "active";
+                    break;
+            }
+        }
+
+        private string GetPageName()
+        {
+            return Request.Url.ToString().Split('/').Last();
+        }
+        }
+    </script>*@
+    <script>
+      new WOW().init();
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
