@@ -49,164 +49,24 @@
 
             <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav pull-right" id="navitems">
-                    @*<li class="active" id="navHome">
-        <a href="@Url.Action("Index", "Home")">Home</a>
-    </li>
-    <li id="navAbout">
-        <a href="@Url.Action("About","Home")">About Us</a>
-    </li>
-    <li id="navTeam">
-        <a href="@Url.Action("Team","Home")">Our Team</a>
-    </li>
-    <li id="navServices">
-        <a href="@Url.Action("Services","Home")">Our Services</a>
-    </li>
-    <li id="navBlog">
-        <a href="@Url.Action("Index","Blog")">Blog</a>
-    </li>
-    <li id="navContact">
-        <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
-    </li>*@
-                    @{if (ViewBag.CurrentMenuItem == "Home"){
-                          <li class="active">
-                    <a href="@Url.Action("Index", "Home")">Home</a>
+                    <li class="@IsCurrentPage("Home","Index")" id="navHome">
+                        <a href="@Url.Action("Index", "Home")">Home</a>
                     </li>
-                    <li>
-                    <a href="@Url.Action("About","Home")">About Us</a>
+                    <li class="@IsCurrentPage("Home", "About")" id="navAbout">
+                        <a href="@Url.Action("About","Home")">About Us</a>
                     </li>
-                    <li>
-                    <a href="@Url.Action("Team","Home")">Our Team</a>
+                    <li class="@IsCurrentPage("Home", "Team")" id="navTeam">
+                        <a href="@Url.Action("Team","Home")">Our Team</a>
                     </li>
-                    <li>
-                    <a href="@Url.Action("Services","Home")">Our Services</a>
+                    <li class="@IsCurrentPage("Home", "Services")" id="navServices">
+                        <a href="@Url.Action("Services","Home")">Our Services</a>             
                     </li>
-                    <li>
-                    <a href="@Url.Action("Index","Blog")">Blog</a>
+                    <li class="@IsCurrentPage("Blog")" id="navBlog">
+                        <a href="@Url.Action("Index","Blog")">Blog</a>
                     </li>
-                    <li>
-                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
-                    </li>
-                    }
-                    else if (ViewBag.CurrentMenuItem == "About"){
-                        <li>
-                    <a href="@Url.Action("Index", "Home")">Home</a>
-                    </li>
-                    <li class="active">
-                    <a href="@Url.Action("About","Home")">About Us</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Team","Home")">Our Team</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Services","Home")">Our Services</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Index","Blog")">Blog</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
-                    </li>
-                    }
-                    else if (ViewBag.CurrentMenuItem == "Our Team"){
-                        <li>
-                    <a href="@Url.Action("Index", "Home")">Home</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("About","Home")">About Us</a>
-                    </li>
-                    <li class="active">
-                    <a href="@Url.Action("Team","Home")">Our Team</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Services","Home")">Our Services</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Index","Blog")">Blog</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
-                    </li>
-                    }
-                    else if(ViewBag.CurrentMenuItem == "Our Services"){
-                        <li>
-                    <a href="@Url.Action("Index", "Home")">Home</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("About","Home")">About Us</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Team","Home")">Our Team</a>
-                    </li>
-                    <li class="active">
-                    <a href="@Url.Action("Services","Home")">Our Services</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Index","Blog")">Blog</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
-                    </li>
-                    }
-                    else if (ViewBag.CurrentMenuItem == "Blog"){
-                        <li>
-                    <a href="@Url.Action("Index", "Home")">Home</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("About","Home")">About Us</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Team","Home")">Our Team</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Services","Home")">Our Services</a>
-                    </li>
-                    <li class="active">
-                    <a href="@Url.Action("Index","Blog")">Blog</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
-                    </li>
-                    }
-                    else if (ViewBag.CurrentMenuItem == "Contact Us"){
-                        <li>
-                    <a href="@Url.Action("Index", "Home")">Home</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("About","Home")">About Us</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Team","Home")">Our Team</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Services","Home")">Our Services</a>
-                    </li>
-                    <li>
-                    <a href="@Url.Action("Index","Blog")">Blog</a>
-                    </li>
-                    <li class="active">
-                    <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
-                    </li>
-                    }
-                    }
-    @*
-    <li>
-        <a href="@Url.Action("Index", "Home")">Home</a>
-    </li>
-    <li>
-        <a href="@Url.Action("About","Home")">About Us</a>
-    </li>
-    <li>
-        <a href="team.html">Our Team</a>
-    </li>
-    <li>
-        <a href="services.html">Our Services</a>
-    </li>
-    <li>
-        <a href="blog.html">Blog</a>
-    </li>
-    <li>
-        <a href="contact.html"><span>Contact Us</span></a>
-    </li>*@
+                    <li class="@IsCurrentPage("Home", "Contact")" id="navContact"> 
+                        <a href="@Url.Action("Contact","Home")"><span>Contact Us</span></a>
+                    </li>                    
                 </ul>
             </div>
         </div>
@@ -271,39 +131,17 @@
     *@
     <script type="text/javascript" src="~/js/jquery-1.10.2.min.js"></script>
     <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="~/js/wow.min.js"></script>@*
-    <script>
-        @{
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            SetCurrentPage();
-        }
-
-        private void SetCurrentPage()
-        {
-            var pageName = GetPageName();
-
-            switch (pageName)
-            {
-                case "home.aspx":
-                    home.Attributes["class"] = "active";
-                    break;
-                case "about.aspx":
-                    about.Attributes["class"] = "active";
-                    break;
-                case "contact.aspx":
-                    contact.Attributes["class"] = "active";
-                    break;
-            }
-        }
-
-        private string GetPageName()
-        {
-            return Request.Url.ToString().Split('/').Last();
+    <script src="~/js/wow.min.js"></script>
+    @functions {
+        public string IsCurrentPage(string controller, string action = null)
+        {            
+            var values = Request.RequestContext.RouteData.Values;
+            var actualAction = values["action"].ToString();
+            var actualCtrl = values["controller"].ToString();
+            var match = (action != null && actualAction == action) && actualCtrl == controller;
+            return match ? "active" : "";
         }
         }
-    </script>*@
     <script>
       new WOW().init();
     </script>

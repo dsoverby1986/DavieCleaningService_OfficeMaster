@@ -29,21 +29,21 @@ namespace DavieCleaningService_OfficeMaster.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            ViewBag.CurrentMenuItem = "Contact Us";
+            ViewBag.CurrentMenuItem = "Contact";
 
             return View();
         }
 
         public ActionResult Team()
         {
-            ViewBag.CurrentMenuItem = "Our Team";
+            ViewBag.CurrentMenuItem = "Team";
 
             return View();
         }
 
         public ActionResult Services()
         {
-            ViewBag.CurrentMenuItem = "Our Services";
+            ViewBag.CurrentMenuItem = "Services";
 
             return View();
         }
