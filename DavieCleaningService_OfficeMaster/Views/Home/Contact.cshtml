@@ -1,17 +1,139 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+ <!-- Main Container -->
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div class="container-fluid-kamn">
+    <div class="row">
+        <div id="googleMap">
+            <br />
+        </div>
+        <div class="col-lg-4 col-lg-offset-1">
+            <h4>Find us at:</h4>
+            <p class="block-author"> Davie Cleaning Service, LLC.</p>
+            <p>126 Ashley Brooke Lane, Mocksville, NC 27028, USA</p>
+            <p>Phone: 1.336.407.7056</p>
+            <p>Fax: 1.336.751.3700</p>
+            <em class="block-author">Email: dcstonyacrouse@gmail.com </em> <br>
+            <br>
+            <p class="lead">Social Link</p><hr>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <a href="#"><img src="assets/img/social-icons/btn_skype.png" alt="Skype"></a>
+                Call us
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <a href="#"><img src="assets/img/social-icons/btn_facebook.png" alt="Facebook"></a>
+                Like us
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12">
+                <a href="#"><img src="assets/img/social-icons/btn_twitter.png" alt="Twitter"></a>
+                Follow us
+            </div>
+            <br>
+        </div>
+        <div class="col-lg-5">
+            <div class="feedback-form">
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+                <div id="contact-response"></div>
+
+                <form action="http://templates.designorbital.com/baleen/contact.php" method="post" id="contact-form">
+                    <fieldset>
+                        <div class="form-group form-group-fullname">
+                            <label class="control-label" for="fullname">NAME *</label>
+                            <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group form-group-email">
+                            <label class="control-label" for="email">E-MAIL *</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail">
+                        </div>
+                        <div class="form-group form-group-message">
+                            <label class="control-label" for="message">MESSAGE *</label>
+                            <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Main Container -->
+@section scripts {
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+    var map;
+    var davieCleaningService = new google.maps.LatLng(35.928790, -80.597634);
+
+    function HomeControl(controlDiv, map) {
+        controlDiv.style.padding = '5px';
+        var controlUI = document.createElement('div');
+        controlUI.style.backgroundColor = '#1BBD9A';
+        controlUI.style.border = '1px solid';
+        controlUI.style.cursor = 'pointer';
+        controlUI.style.textAlign = 'center';
+        controlUI.title = 'Set map to Davie Cleaning Service';
+        controlDiv.appendChild(controlUI);
+        var controlText = document.createElement('div');
+        controlText.style.fontFamily = 'Arial,sans-serif';
+        controlText.style.fontSize = '12px';
+        controlText.style.paddingLeft = '4px';
+        controlText.style.paddingRight = '4px';
+        controlText.style.color = 'white';
+        controlText.innerHTML = '<b>Back To DCS<b>'
+        controlUI.appendChild(controlText);
+
+        google.maps.event.addDomListener(controlUI, 'click', function () {
+            map.setCenter(davieCleaningService);
+            map.setZoom(14);
+        });
+    }
+
+    function initialize() {
+        var mapDiv = document.getElementById('googleMap');
+        var myOptions = {
+            center: davieCleaningService,
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        };
+        /*var davieCleaningService = new google.maps.LatLng(35.928790,-80.597634);
+        var mapProp = {
+          center:davieCleaningService,
+          zoom:14,
+          mapTypeId:google.maps.MapTypeId.HYBRID
+        };*/
+        map = new google.maps.Map(mapDiv, myOptions);
+        var homeControlDiv = document.createElement('div');
+        var homeControl = new HomeControl(homeControlDiv, map);
+        homeControlDiv.index = 1;
+        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+
+        var marker = new google.maps.Marker({
+            position: davieCleaningService,
+            title: 'Click to zoom'
+        });
+
+        marker.setMap(map);
+
+        var infowindow = new google.maps.InfoWindow({
+            content: "Davie Cleaning Service, LLC."
+        });
+
+        infowindow.open(map, marker);
+
+        google.maps.event.addListener(marker, 'click', function () {
+            map.setZoom(17);
+            map.setCenter(marker.getPosition());
+        });
+
+        google.maps.event.addListener(map, 'center_changed', function () {
+            window.setTimeout(function () {
+                map.panTo(marker.getPosition());
+            }, 180000);
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+}
+
+<!--End Main Container -->

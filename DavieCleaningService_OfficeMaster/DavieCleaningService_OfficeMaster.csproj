@@ -159,6 +159,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -197,6 +199,7 @@
     <Content Include="assets\ico\favicon.ico" />
     <Content Include="assets\ico\iPhone-Icon.png" />
     <Content Include="assets\img\slider\1.jpg" />
+    <Content Include="assets\img\slider\aboutBanner.png" />
     <Content Include="assets\img\slider\b1.jpg" />
     <Content Include="assets\img\slider\barbecue.jpg" />
     <Content Include="assets\img\slider\Bicycle.jpg" />
@@ -231,6 +234,7 @@
     <Content Include="assets\img\slider\slide7.jpg" />
     <Content Include="assets\img\slider\slide8.jpg" />
     <Content Include="assets\img\slider\slide9.jpg" />
+    <Content Include="assets\img\slider\teamwork5_2_1918x500.jpg" />
     <Content Include="assets\img\social-icons\btn_facebook.png" />
     <Content Include="assets\img\social-icons\btn_skype.png" />
     <Content Include="assets\img\social-icons\btn_twitter.png" />
@@ -238,6 +242,7 @@
     <Content Include="assets\img\social-icons\googleplus.png" />
     <Content Include="assets\img\social-icons\pinterest.png" />
     <Content Include="assets\img\social-icons\twitter.png" />
+    <Content Include="assets\img\team\GM-TT-Rafferty-82a74e67.jpeg" />
     <Content Include="assets\img\team\member1.png" />
     <Content Include="assets\img\team\member2.png" />
     <Content Include="assets\img\team\member3.png" />
@@ -386,6 +391,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Team.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

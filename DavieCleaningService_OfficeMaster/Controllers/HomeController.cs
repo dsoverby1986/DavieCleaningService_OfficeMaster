@@ -43,7 +43,7 @@ namespace DavieCleaningService_OfficeMaster.Controllers
 
         public ActionResult Services()
         {
-            ViewBag.CurrentMenuItem = "Services";
+            ViewBag.CurrentMenuItem = "lServices";
 
             return View();
         }

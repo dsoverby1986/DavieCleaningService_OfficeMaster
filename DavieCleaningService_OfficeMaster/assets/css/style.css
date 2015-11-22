@@ -774,3 +774,8 @@ footer h3 {
     padding-top : 0px;
     padding-bottom: 0px;
 }
+
+#googleMap {
+    height: 450px;
+    width: 100%;
+}
