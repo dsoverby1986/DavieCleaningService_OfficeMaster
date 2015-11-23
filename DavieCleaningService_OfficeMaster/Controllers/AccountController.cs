@@ -66,7 +66,7 @@ namespace DavieCleaningService_OfficeMaster.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
+        public async Task<ActionResult> Login(LoginRegisterViewModel.LoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
             {
@@ -147,11 +147,11 @@ namespace DavieCleaningService_OfficeMaster.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(LoginRegisterViewModel.RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { DisplayName = (model.FirstName + " " + model.LastName), Email = model.Email, UserName = model.Email, FirstName = model.FirstName, LastName = model.LastName };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

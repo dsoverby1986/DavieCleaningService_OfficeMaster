@@ -53,3 +53,10 @@ c:\users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService
 c:\users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\obj\Debug\DavieCleaningService_OfficeMaster.csprojResolveAssemblyReference.cache
 c:\users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\obj\Debug\DavieCleaningService_OfficeMaster.dll
 c:\users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\obj\Debug\DavieCleaningService_OfficeMaster.pdb
+C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\obj\Debug\DavieCleaningService_OfficeMaster.Migrations.InitialCreate.resources
+C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\obj\Debug\DavieCleaningService_OfficeMaster.csproj.GenerateResource.Cache
+C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\bin\SendGrid.dll
+C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\bin\SendGrid.SmtpApi.dll
+C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\bin\SendGridMail.dll
+C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\bin\System.Net.Http.Formatting.dll
+C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\bin\System.Net.Http.Formatting.xml
