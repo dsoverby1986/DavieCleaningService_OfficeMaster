@@ -12,7 +12,11 @@ namespace DavieCleaningService_OfficeMaster.Controllers
     public class HomeController : Controller
     {
         public ActionResult Index()
-        {       
+        {
+            ViewBag.LargerRibbon = "~/assets/img/slider/DavieCleaningService.png";
+
+            ViewBag.SmallerRibbon = "~/assets/img/slider/DavieCleaningService.png";
+
             return View();
         }
 

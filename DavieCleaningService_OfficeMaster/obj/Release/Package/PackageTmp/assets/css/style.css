@@ -744,6 +744,7 @@ footer h3 {
     font-size: 12px;
     padding-bottom: 0px;
     bottom: 2px;
+    /*margin-bottom:120px;*/
   }
   .carousel-caption .carousel-title {
     font-size: 18px;
@@ -752,8 +753,9 @@ footer h3 {
 @media (max-width: 767px) {
   .carousel-caption {
     font-size: 11px;
-    padding-bottom: 0;
+    padding-bottom: 0px;
     bottom: 0;
+    /*margin-bottom:120px;*/
   }
   .carousel-caption .carousel-title {
     font-size: 14px;
@@ -778,4 +780,10 @@ footer h3 {
 #googleMap {
     height: 450px;
     width: 100%;
+}
+
+mark {
+    background-color:rgba(27, 189, 154,.5);
+    color:#ffffff;
+    border-radius: 3px;
 }

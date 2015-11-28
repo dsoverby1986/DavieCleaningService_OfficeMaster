@@ -5584,6 +5584,7 @@ button.close {
     right: 20%;
     left: 20%;
     padding-bottom: 30px;
+    margin-bottom:300px;
   }
   .carousel-indicators {
     bottom: 20px;
