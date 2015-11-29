@@ -33,5 +33,8 @@ namespace DavieCleaningService_OfficeMaster.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Employee> Employees { get; set; }
+
     }
 }

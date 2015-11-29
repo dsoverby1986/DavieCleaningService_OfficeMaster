@@ -60,3 +60,4 @@ C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService
 C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\bin\SendGridMail.dll
 C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\bin\System.Net.Http.Formatting.dll
 C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\bin\System.Net.Http.Formatting.xml
+C:\Users\dsoverby1986\documents\visual studio 2013\Projects\DavieCleaningService_OfficeMaster\DavieCleaningService_OfficeMaster\obj\Debug\DavieCleaningService_OfficeMaster.Migrations.Employee.resources

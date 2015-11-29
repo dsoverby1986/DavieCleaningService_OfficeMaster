@@ -177,7 +177,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -187,9 +186,14 @@
     <Compile Include="Migrations\201511230459168_InitialCreate.Designer.cs">
       <DependentUpon>201511230459168_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511291624092_Employee.cs" />
+    <Compile Include="Migrations\201511291624092_Employee.Designer.cs">
+      <DependentUpon>201511291624092_Employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ContactMessage.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1171,6 +1175,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201511230459168_InitialCreate.resx">
       <DependentUpon>201511230459168_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511291624092_Employee.resx">
+      <DependentUpon>201511291624092_Employee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
