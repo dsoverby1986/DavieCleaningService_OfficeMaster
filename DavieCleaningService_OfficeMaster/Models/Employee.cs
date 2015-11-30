@@ -12,6 +12,12 @@ namespace DavieCleaningService_OfficeMaster.Models
         public int EmployeeId { get; set; }
         public decimal PayRate { get; set; }
         public string Position { get; set; }
-        public decimal OvertimeRate { get; set; }
+        public decimal VacationTime { get; set; }
+        public decimal SickTime { get; set; }
+        public decimal PersonalTime { get; set; }
+        public DateTimeOffset StartDate { get; set; }
+        public DateTimeOffset EndDate { get; set; }
+        public int ManagerId { get; set; }
+        public string Email { get; set; }
     }
 }

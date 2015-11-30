@@ -787,3 +787,8 @@ footer h3 {
     color:#ffffff;
     border-radius: 3px;
 }
+
+#personnelEntrance {
+    margin-left:105px;
+    margin-right:-105px;
+}
