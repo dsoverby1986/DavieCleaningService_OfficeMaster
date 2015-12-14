@@ -1,0 +1,118 @@
+﻿@model IEnumerable<DavieCleaningService_OfficeMaster.Models.Employee>
+@{
+    ViewBag.Title = "Employees";
+}
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>
+                Invoice
+                <small>
+                    Some examples to get you started
+                </small>
+            </h3>
+        </div>
+        <div class="title_right">
+            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Daily active users <small>Sessions</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link" href="#"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">Settings 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Settings 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <table id="example" class="table table-striped table-responsive responsive-utilities jambo_table bulk-action">
+                        <thead>
+                            <tr class="headings">
+                                <th>
+                                    <input type="checkbox" class="tableflat">
+                                </th>
+                                <th>Name </th>
+                                <th>Position </th>
+                                <th>Status </th>
+                                <th class=" no-link last">
+                                    <span class="nobr">Action</span>
+                                </th>
+                            </tr>  
+                        </thead>
+                        <tbody>
+                            @{
+                                var classCode = 0;
+
+                                foreach (var employee in Model)
+                                {
+                                    var employeeStatus = "";
+
+                                    var oddOrEvenClass = "";
+
+                                    classCode += 1;
+
+                                    if(classCode % 2 == 0)
+                                    {
+                                        oddOrEvenClass = "even";
+                                    }
+                                    else
+                                    {
+                                        oddOrEvenClass = "odd";
+                                    }
+
+                                    if(employee.EndDate == null)
+                                    {
+                                        employeeStatus = "Active";
+                                    }
+                                    else
+                                    {
+                                        employeeStatus = "Inactive";
+                                    }
+                                    <tr class="@oddOrEvenClass pointer">
+                                        <td class="a-center "><input type="checkbox" class="flat" name="table_records"></td>
+                                        <td class="a-center ">@(employee.FirstName + " " + employee.LastName) </td>
+                                        <td class="">@employee.Position.Title </td>
+                                        <td class="">@employeeStatus </td>
+                                        <td class="last">
+                                            <a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+    </div>
+</div>
