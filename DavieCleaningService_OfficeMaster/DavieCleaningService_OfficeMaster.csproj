@@ -178,6 +178,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="extensions\EmployeeCodeGenerator.cs" />
@@ -1313,7 +1314,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Employees.cshtml" />
